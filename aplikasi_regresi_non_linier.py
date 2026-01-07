@@ -8,6 +8,15 @@ from scipy.optimize import curve_fit
 
 st.set_page_config(page_title="Regresi Non-Linier Kesehatan (Farmakokinetika)", layout="wide")
 
+# Menambahkan CSS untuk menyembunyikan elemen tertentu
+st.markdown("""
+    <style>
+        .css-1v3fvcr { 
+            display: none;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
 # %%
 # ---------- Model ----------
 def exp_decay(t, C0, k):
