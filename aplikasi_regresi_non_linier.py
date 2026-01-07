@@ -8,10 +8,11 @@ from scipy.optimize import curve_fit
 
 st.set_page_config(page_title="Regresi Non-Linier Kesehatan (Farmakokinetika)", layout="wide")
 
-# Menambahkan CSS untuk menyembunyikan elemen tertentu
+# Menambahkan CSS untuk menyembunyikan ikon-ikon di header Streamlit
 st.markdown("""
     <style>
-        .css-1v3fvcr { 
+        /* Menyembunyikan ikon share, star, edit, dan lainnya */
+        .css-1n7v3ap, .css-1v3fvcr, .css-1x8lxhp {
             display: none;
         }
     </style>
