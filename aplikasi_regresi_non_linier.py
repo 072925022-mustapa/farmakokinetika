@@ -8,16 +8,6 @@ from scipy.optimize import curve_fit
 
 st.set_page_config(page_title="Regresi Non-Linier Kesehatan (Farmakokinetika)", layout="wide")
 
-# Menambahkan CSS untuk menyembunyikan ikon-ikon di header Streamlit
-st.markdown("""
-    <style>
-        /* Menyembunyikan ikon share, star, edit, dan lainnya */
-        .css-1n7v3ap, .css-1v3fvcr, .css-1x8lxhp {
-            display: none;
-        }
-    </style>
-""", unsafe_allow_html=True)
-
 # %%
 # ---------- Model ----------
 def exp_decay(t, C0, k):
@@ -175,11 +165,11 @@ with c4:
     st.pyplot(fig2)
 
 st.divider()
-st.subheader("Interpretasi Klinis Singkat (Contoh)")
+st.subheader("Interpretasi Klinis Singkat")
 st.write(
     f"Estimasi k = {k_hat:.4f} menunjukkan laju eliminasi. "
     f"Dengan k tersebut, waktu paruh obat t½ ≈ {half_life:.2f} jam. "
-    "Dalam praktik, model dapat diperluas (mis. multi-kompartemen, absorpsi oral, kovariat pasien)."
+    "Dalam praktik, model dapat diperluas (contoh. multi-kompartemen, absorpsi oral, kovariat pasien)."
 )
 
 
